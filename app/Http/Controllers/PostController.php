@@ -55,4 +55,13 @@ class PostController extends Controller
 
         dd('created');
     }
+
+    public function update()
+    {
+        $post = Post::find(5);
+//        dd($post->title);
+        $post->update(['title' => 'updated title']);
+        dd('updated');
+    }
+
 }
