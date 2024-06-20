@@ -18,4 +18,41 @@ class PostController extends Controller
         return Post::all();
     }
 
+    public function store()
+    {
+        $postsArr = [
+            [
+                'title' => 'title of post from phpstorm',
+                'slug' => 'post_from_phpstorm',
+                'content' => 'some content from phpstorm',
+                'image' => 'some_image',
+                'likes' => 12,
+                'is_published' => true,
+            ],
+            [
+                'title' => 'another title of post from phpstorm',
+                'slug' => 'another_post_from_phpstorm',
+                'content' => 'some content from phpstorm',
+                'image' => 'another_some_image',
+                'likes' => 12,
+                'is_published' => true,
+            ],
+        ];
+
+//        Post::create([
+//            'title' => 'new title of post from phpstorm',
+//            'slug' => 'new_post_from_phpstorm',
+//            'content' => 'new content from phpstorm',
+//            'image' => 'new_image',
+//            'likes' => 12,
+//            'is_published' => false,
+//        ]);
+
+        foreach ($postsArr as $post) {
+//           Post::create($post);
+
+        }
+
+        dd('created');
+    }
 }
